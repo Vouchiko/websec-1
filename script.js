@@ -27,12 +27,14 @@ function button(event) {
                 c = a * b;
                 break;
             case "/":
-                if (b === 0) {
-                    current_output = "Division by zero!";
-                    c = "";
+                if(Math.abs(b) < Number.EPSILON){
+                    document.getElementById("input_2").style.backgroundColor='orange';
+                    document.getElementById("output").value = "Division by zero!!!";
+                    return;
                 }
-                else
+                else{
                     c = a / b;
+                }
                 break;
         }
 
@@ -45,6 +47,6 @@ function button(event) {
     } else {
         outputElement.textContent = current_output;
     }
-    
+
     previous_output = current_output;
 }
