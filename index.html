@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="input-container">
+        <input type="number" class="input-field" id="input_1"/>
+        <select class="operation-field" id="operation">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
+        <input type="number" class="input-field" id="input_2"/>
+    </div>
+
+    <div class="button-container">
+        <button class="button" onclick="button()">Calculate</button>
+    </div>
+
+    <div class="output-container">
+        <textarea class="output-field" id="output" contenteditable="false"></textarea>
+    </div>  
+</body>
+
+</html>
